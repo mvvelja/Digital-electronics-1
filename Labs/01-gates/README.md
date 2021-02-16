@@ -1,7 +1,8 @@
 # Lab 01-gates
 
-## GitHub: https://github.com/mvvelja/Digital-electronics-1
+## GitHub: 
 
+https://github.com/mvvelja/Digital-electronics-1
 
 ## Verification of De Morgan's laws of function f(c,b,a)
 
@@ -20,7 +21,7 @@ end architecture dataflow;
 
 ### Waveforms
 
-![Signal1](Images/signal1.png)
+![signal1](Images/signal1.png)
 
 ### Table
 

@@ -1,6 +1,7 @@
 # Digital-electronics-1
 
 ## Labs
+https://www.edaplayground.com/x/GYxg
 
 **Source code**
 ```vhdl
@@ -12,15 +13,3 @@ begin
     --fxor_o <= a_i xor b_i;
 
 end architecture dataflow;
-
-| **c** | **b** |**a** | **f(c,b,a)** |
-| :-: | :-: | :-: | :-: |
-| 0 | 0 | 0 |  |
-| 0 | 0 | 1 |  |
-| 0 | 1 | 0 |  |
-| 0 | 1 | 1 |  |
-| 1 | 0 | 0 |  |
-| 1 | 0 | 1 |  |
-| 1 | 1 | 0 |  |
-| 1 | 1 | 1 |  |
-```

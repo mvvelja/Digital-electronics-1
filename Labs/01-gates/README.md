@@ -36,7 +36,10 @@ end architecture dataflow;
 | 1 | 1 | 0 | 0 |
 | 1 | 1 | 1 | 0 |
 
-### EDA Playground link: https://www.edaplayground.com/x/GYxg
+### EDA Playground link: 
+
+https://www.edaplayground.com/x/GYxg
+
 
 
 ## Verification of Distributive laws
@@ -57,6 +60,8 @@ end architecture dataflow;
 
 ### Waveforms
 
-![Signal2](Images/signal2.png)
+![signal2](Images/signal2.png)
 
-### EDA Playground link: https://www.edaplayground.com/x/N_pz
+### EDA Playground link: 
+
+https://www.edaplayground.com/x/N_pz

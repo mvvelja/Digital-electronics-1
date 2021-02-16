@@ -2,7 +2,8 @@
 
 ## GitHub: https://github.com/mvvelja/Digital-electronics-1
 
-## De Morgan's laws of function f(c,b,a)
+
+## Verification of De Morgan's laws of function f(c,b,a)
 
 ![Functions](Images/1.png)
 
@@ -19,7 +20,7 @@ end architecture dataflow;
 
 ### Waveforms
 
-![Waveforms](Images/signal1.jpg)
+![Waveforms](Images/signal1.png)
 
 ### Table
 
@@ -35,3 +36,26 @@ end architecture dataflow;
 | 1 | 1 | 1 | 0 |
 
 ### EDA Playground link: https://www.edaplayground.com/x/GYxg
+
+
+## Verification of Distributive laws
+
+![Equation](Images/2.png)
+
+**VHDL code**
+```vhdl
+architecture dataflow of gates is
+begin
+    f1_o <= (a_i and b_i)or(a_i and c_i);
+	f2_o <= a_i and (b_i or c_i);
+	f3_o <= (a_i or b_i) and (a_i or c_i);
+	f4_o <= a_i or (b_i and c_i);
+
+end architecture dataflow;
+```
+
+### Waveforms
+
+![Waveforms](Images/signal2.png)
+
+### EDA Playground link: https://www.edaplayground.com/x/N_pz

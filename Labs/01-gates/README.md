@@ -5,7 +5,7 @@
 
 ## Verification of De Morgan's laws of function f(c,b,a)
 
-![Functions](Images/1.png)
+![1](Images/1.png)
 
 **VHDL code**
 ```vhdl
@@ -20,7 +20,7 @@ end architecture dataflow;
 
 ### Waveforms
 
-![Waveforms](Images/signal1.png)
+![Signal1](Images/signal1.png)
 
 ### Table
 
@@ -40,7 +40,7 @@ end architecture dataflow;
 
 ## Verification of Distributive laws
 
-![Equation](Images/2.png)
+![2](Images/2.png)
 
 **VHDL code**
 ```vhdl
@@ -56,6 +56,6 @@ end architecture dataflow;
 
 ### Waveforms
 
-![Waveforms](Images/signal2.png)
+![Signal2](Images/signal2.png)
 
 ### EDA Playground link: https://www.edaplayground.com/x/N_pz

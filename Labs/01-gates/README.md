@@ -21,7 +21,7 @@ end architecture dataflow;
 
 ### Waveforms
 
-![3](Images/3.png)
+![3](Images/3.PNG)
 
 ### Table
 
@@ -60,7 +60,7 @@ end architecture dataflow;
 
 ### Waveforms
 
-![4](Images/4.png)
+![4](Images/4.PNG)
 
 ### EDA Playground link: 
 

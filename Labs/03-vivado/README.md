@@ -76,42 +76,42 @@ p_stimulus : process
 
 ### Simulated time waveforms
 
-![1](Images/1.PNG)
+![1](Images/1.png)
 
 ## Vivado creating project TUTORIAL
 
-### Vivado 2020.2 ---> "Create Project"
+### 1) Vivado 2020.2 ---> "Create Project"
 ![2](Images/2.PNG)
 
-### Click on "Next"
+### 2) Click on "Next"
 ![3](Images/3.PNG)
 
-### Name your project and select location ---> "Next"
+### 3) Name your project and select location ---> "Next"
 ![4](Images/4.PNG)
 
-### RTL Project as default ---> "Next"
+### 4) RTL Project as default ---> "Next"
 ![5](Images/5.PNG)
 
-### Click on "Create File" than name your Source file ---> "OK" (Do not forget to change "Target language" and "Simulator language" to VHDL)
+### 5) Click on "Create File" than name your Source file ---> "OK" (Do not forget to change "Target language" and "Simulator language" to VHDL)
 ![6](Images/6.PNG)
 
-### Next window just skip (Next)
+### 6) Next window just skip (Next)
 ![7](Images/7.PNG)
 
-### Select "Boards" on top of the window and choose "Nexys A7-50T" ---> "Next"
+### 7) Select "Boards" on top of the window and choose "Nexys A7-50T" ---> "Next"
 ![8](Images/8.PNG)
 
-### Check Project summary ---> "Finish"
+### 8) Check Project summary ---> "Finish"
 ![9](Images/9.PNG)
 
-### Pop-up window skip (OK)
+### 9) Pop-up window skip (OK)
 ![10](Images/10.PNG)
 
-### File -> Add Sources (or Alt + A), "Add or create simulation sources" ---> "Next" (Testbench for us)
+### 10) File -> Add Sources (or Alt + A), "Add or create simulation sources" ---> "Next" (Testbench for us)
 ![11](Images/11.PNG)
 
-### Name your Source File ---> "OK" (skip pop-up window)
+### 11) Name your Source File ---> "OK" (skip pop-up window)
 ![12](Images/12.PNG)
 
-### Successfully added Testbench file ---> We can now do the our work!
+### 12) Successfully added Testbench file ---> We can now do the our work!
 ![13](Images/13.PNG)

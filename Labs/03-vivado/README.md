@@ -50,23 +50,23 @@ p_stimulus : process
         -- Report a note at the begining of stimulus process
         report "Stimulus process started" severity note;
 
-        s_d <= "00"; s_c <= "00"; s_b <= "00"; s_a <= "00"; s_sel <= "00"; wait for 50 ns;
+        s_d <= "00"; s_c <= "00"; s_b <= "00"; s_a <= "00"; s_sel <= "00"; wait for 100 ns;
         
-        s_a <= "00"; wait for 50 ns;
-        s_b <= "01"; wait for 50 ns;
+        s_a <= "00"; wait for 100 ns;
+        s_b <= "01"; wait for 100 ns;
         
-        s_sel <= "01"; wait for 50 ns;
-        s_c <= "00"; wait for 50 ns;
-        s_b <= "11"; wait for 50 ns;  
+        s_sel <= "01"; wait for 100 ns;
+        s_c   <= "00"; wait for 100 ns;
+        s_b   <= "11"; wait for 100 ns;  
         
-        s_d <= "11";  s_c <= "11"; s_b <= "01"; s_a <= "00"; 
-        s_sel <= "10"; wait for 50 ns;  
+        s_d   <= "11";  s_c <= "11"; s_b <= "01"; s_a <= "00"; 
+        s_sel <= "10"; wait for 100 ns;  
         
-        s_d <= "00";  s_c <= "00"; s_b <= "00"; s_a <= "01"; 
-        s_sel <= "10"; wait for 50 ns;  
+        s_d   <= "00";  s_c <= "00"; s_b <= "00"; s_a <= "01"; 
+        s_sel <= "10"; wait for 100 ns;  
         
-        s_d <= "11";  s_c <= "11"; s_b <= "01"; s_a <= "00"; 
-        s_sel <= "11"; wait for 50 ns;  
+        s_d   <= "11";  s_c <= "11"; s_b <= "01"; s_a <= "00"; 
+        s_sel <= "11"; wait for 100 ns;  
                
         -- Report a note at the end of stimulus process
         report "Stimulus process finished" severity note;

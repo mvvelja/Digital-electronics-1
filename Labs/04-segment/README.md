@@ -193,4 +193,4 @@ end Behavioral;
 
 ### Screenshot with simulated time waveforms
 
-![3](Images/3.PNG)
+![3](Images/3.png)

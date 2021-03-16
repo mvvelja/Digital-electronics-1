@@ -99,6 +99,7 @@ p_stimulus : process
 ### Listing of VHDL code from source file top.vhd with all instantiations for the 4-bit bidirectional counter
 
 **VHDL code of top.vhd**
+```vhdl
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
@@ -117,41 +118,46 @@ entity top is
            CF : out STD_LOGIC;
            CG : out STD_LOGIC;
            AN : out STD_LOGIC_VECTOR (8-1 downto 0));
-end top;```vhdl
+end top;
 
 
 architecture Behavioral of top is
 
+    -- Internal clock enable
     signal s_en  : std_logic;
+    -- Internal counter
     signal s_cnt : std_logic_vector(4 - 1 downto 0);
+
 begin
 
     clk_en0 : entity work.clock_enable
         generic map(
             --- WRITE YOUR CODE HERE
-            g_MAX   => 100000000
+            g_MAX => 10000000
         )
         port map(
             --- WRITE YOUR CODE HERE
-            clk     => CLK100MHZ,
-            reset   => BTNC,
-            ce_o    => s_en
+            clk   => CLK100MHZ,
+            reset => BTNC,
+            ce_o  => s_en
+            
         );
 
     bin_cnt0 : entity work.cnt_up_down
         generic map(
-  
-            g_CNT_WIDTH =>  4
+            --- WRITE YOUR CODE HERE
+            g_CNT_WIDTH => 4
         )
         port map(
- 
-            clk         =>  CLK100MHZ,
-            reset       =>  BTNC,
-            en_i        =>  s_en,
-            cnt_up_i    =>  SW(0),
-            cnt_o       =>  s_cnt
+            --- WRITE YOUR CODE HERE
+            clk      => CLK100MHZ,
+            reset    => BTNC,
+            en_i     => s_en,
+            cnt_up_i => SW(0),
+            cnt_o    => s_cnt
         );
 
+    -- Display input value on LEDs
     LED(3 downto 0) <= s_cnt;
 
     hex2seg : entity work.hex_7seg
@@ -167,8 +173,9 @@ begin
         );
 
     AN <= b"1111_1110";
+
 end architecture Behavioral;
-``` 
+```
 
 ### Image of the top layer including both counters, ie a 4-bit bidirectional counter from Part 4 and a 16-bit counter with a 10 ms
 

@@ -49,7 +49,7 @@ begin
     -- Output must be retyped from "unsigned" to "std_logic_vector"
     cnt_o <= std_logic_vector(s_cnt_local);
 
-end architecture behavioral;
+end architecture Behavioral;
 ```
 ### Listing of VHDL reset and stimulus processes from testbench file tb_cnt_up_down.vhd with syntax highlighting and asserts
 
@@ -99,7 +99,27 @@ p_stimulus : process
 ### Listing of VHDL code from source file top.vhd with all instantiations for the 4-bit bidirectional counter
 
 **VHDL code of top.vhd**
-```vhdl
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+
+entity top is
+    Port ( 
+           CLK100MHZ : in STD_LOGIC;
+           BTNC : in STD_LOGIC;
+           SW : in STD_LOGIC_VECTOR (1-1 downto 0);
+           LED : out STD_LOGIC_VECTOR (4-1 downto 0);
+           CA : out STD_LOGIC;
+           CB : out STD_LOGIC;
+           CC : out STD_LOGIC;
+           CD : out STD_LOGIC;
+           CE : out STD_LOGIC;
+           CF : out STD_LOGIC;
+           CG : out STD_LOGIC;
+           AN : out STD_LOGIC_VECTOR (8-1 downto 0));
+end top;```vhdl
+
+
 architecture Behavioral of top is
 
     signal s_en  : std_logic;

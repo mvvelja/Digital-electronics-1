@@ -70,10 +70,8 @@ architecture testbench of tb_driver_7seg_4digits is
     signal s_dp_i : std_logic_vector(4-1 downto 0);
     signal s_dp_o : std_logic;
     signal s_seg : std_logic_vector(7-1 downto 0);
-    
     signal s_dig : std_logic_vector(4-1 downto 0);
     
-
 begin
     -- Connecting testbench signals with driver_7seg_4digits entity
     -- (Unit Under Test)
@@ -107,12 +105,10 @@ begin
         end loop;
         wait;
     end process p_clk_gen;
-
     --------------------------------------------------------------------
     -- Reset generation process
     --------------------------------------------------------------------
     --- WRITE YOUR CODE HERE
-    
     p_reset_gen : process
     begin
         s_reset <= '0';
@@ -125,7 +121,6 @@ begin
         s_reset <= '0';
         wait;
     end process p_reset_gen;
-
     --------------------------------------------------------------------
     -- Data generation process
     --------------------------------------------------------------------
@@ -145,7 +140,6 @@ begin
        wait;
       end process p_stimulus; 
         
-
 end architecture testbench;
 ```
 
@@ -160,7 +154,6 @@ end architecture testbench;
 architecture Behavioral of top is
     -- No internal signals
 begin
-
     --------------------------------------------------------------------
     -- Instance (copy) of driver_7seg_4digits entity
     driver_seg_4 : entity work.driver_7seg_4digits
@@ -188,7 +181,6 @@ begin
             data3_i(1) => SW(13),
             data3_i(0) => SW(12),
             
-            
             dp_i => "0111",
             dp_o => DP,
             
@@ -201,14 +193,10 @@ begin
             seg_o(0) => CG,
 
             dig_o => AN (4-1 downto 0)
-            
-            --- WRITE YOUR CODE HERE
-            
+            --- WRITE YOUR CODE HERE   
         );
-
     -- Disconnect the top four digits of the 7-segment display
     AN(7 downto 4) <= b"1111";
-
 end architecture Behavioral;
 ```
 

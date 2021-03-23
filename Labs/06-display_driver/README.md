@@ -21,20 +21,15 @@ p_mux : process(s_cnt, data0_i, data1_i, data2_i, data3_i, dp_i)
                 s_hex <= data3_i;
                 dp_o  <= dp_i(3);
                 dig_o <= "0111";
-
             when "10" =>
-                -- WRITE YOUR CODE HERE
                 s_hex <= data2_i;
                 dp_o  <= dp_i(2);
                 dig_o <= "1011";
             when "01" =>
-                -- WRITE YOUR CODE HERE
                 s_hex <= data1_i;
                 dp_o  <= dp_i(1);
                 dig_o <= "1101";
-
             when others =>
-                -- WRITE YOUR CODE HERE
                 s_hex <= data0_i;
                 dp_o  <= dp_i(0);
                 dig_o <= "1110";
@@ -54,12 +49,11 @@ end entity tb_driver_7seg_4digits;
 
 architecture testbench of tb_driver_7seg_4digits is
 
-    -- Local constants
+
     constant c_CLK_100MHZ_PERIOD : time    := 10 ns;
 
-    --Local signals
     signal s_clk_100MHz : std_logic;
-    --- WRITE YOUR CODE HERE
+
     signal s_reset : std_logic;
     
     signal s_data0 : std_logic_vector(4-1 downto 0);
@@ -73,9 +67,7 @@ architecture testbench of tb_driver_7seg_4digits is
     signal s_dig : std_logic_vector(4-1 downto 0);
     
 begin
-    -- Connecting testbench signals with driver_7seg_4digits entity
-    -- (Unit Under Test)
-    --- WRITE YOUR CODE HERE
+
     uut_driver_7seg_4digits : entity work.driver_7seg_4digits
     port map(
             clk => s_clk_100MHz,
@@ -108,15 +100,14 @@ begin
     --------------------------------------------------------------------
     -- Reset generation process
     --------------------------------------------------------------------
-    --- WRITE YOUR CODE HERE
     p_reset_gen : process
     begin
         s_reset <= '0';
-        wait for 28 ns;
+        wait for 25 ns;
         
         -- Reset activated
         s_reset <= '1';
-        wait for 53 ns;
+        wait for 55 ns;
        
         s_reset <= '0';
         wait;
@@ -124,7 +115,6 @@ begin
     --------------------------------------------------------------------
     -- Data generation process
     --------------------------------------------------------------------
-    --- WRITE YOUR CODE HERE
     p_stimulus : process
     begin
         report "Stimulus process started" severity note;
@@ -142,7 +132,6 @@ begin
         
 end architecture testbench;
 ```
-
 ### Screenshot with simulated time waveforms
 
 ![2](Images/2.png)
@@ -164,7 +153,6 @@ begin
             data0_i(2) => SW(2),
             data0_i(1) => SW(1),
             data0_i(0) => SW(0),
-            --- WRITE YOUR CODE HERE
             
             data1_i(3) => SW(7),
             data1_i(2) => SW(6),
@@ -192,14 +180,12 @@ begin
             seg_o(1) => CF,
             seg_o(0) => CG,
 
-            dig_o => AN (4-1 downto 0)
-            --- WRITE YOUR CODE HERE   
+            dig_o => AN (4-1 downto 0) 
         );
     -- Disconnect the top four digits of the 7-segment display
     AN(7 downto 4) <= b"1111";
 end architecture Behavioral;
 ```
-
 ## Eight-digit driver
 
 ### Image of the driver schematic

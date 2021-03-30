@@ -58,10 +58,10 @@ end process p_d_latch;
 p_reset_gen: process
 begin
       s_arst <= '0';
-      wait for 38 ns;
+      wait for 30 ns;
       -- reset activated
       s_arst <= '1';
-      wait for 53ns;
+      wait for 50ns;
       -- reset deactivated
       s_arst <= '0';
       wait for 300ns;
@@ -238,9 +238,9 @@ end process p_clk_gen;
 p_reset_gen : process 
 begin
     s_arst <= '0';
-    wait for 28 ns;
+    wait for 30 ns;
     s_arst <= '1';
-    wait for 13 ns;
+    wait for 15 ns;
     s_arst <= '0';                
     wait;
 end process p_reset_gen;
@@ -295,9 +295,9 @@ end process p_clk_gen;
 p_reset_gen : process 
 begin
     s_rst <= '0';
-    wait for 28 ns;
+    wait for 30 ns;
     s_rst <= '1';
-    wait for 13 ns;
+    wait for 15 ns;
     s_rst <= '0';                
     wait;
 end process p_reset_gen;
@@ -352,9 +352,9 @@ end process p_clk_gen;
 p_reset_gen : process 
 begin
     s_rst <= '0';
-    wait for 28 ns;
+    wait for 30 ns;
     s_rst <= '1';
-    wait for 13 ns;
+    wait for 15 ns;
     s_rst <= '0';                
     wait;
 end process p_reset_gen;
@@ -430,9 +430,9 @@ end process p_clk_gen;
 p_reset_gen : process 
 begin
     s_rst <= '0';
-    wait for 28 ns;
+    wait for 30 ns;
     s_rst <= '1';
-    wait for 13 ns;
+    wait for 15 ns;
     s_rst <= '0';                
     wait;
 end process p_reset_gen;
@@ -480,12 +480,16 @@ end process p_stimulus;
 
 ### Screenshot with simulated time waveforms
 
+#### p_d_ff_arst
 ![3](Images/3.png)
 
+#### p_d_ff_rst
 ![4](Images/4.png)
 
+#### p_jk_ff_rst
 ![5](Images/5.png)
 
+#### p_t_ff_rst
 ![6](Images/6.png)
 
 ## Shift register

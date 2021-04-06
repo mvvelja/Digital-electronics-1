@@ -11,17 +11,10 @@ https://github.com/mvvelja/Digital-electronics-1
 | **Clock** | ![rising](Images/eq_uparrow.png) | ![rising](Images/eq_uparrow.png) | ![rising](Images/eq_uparrow.png) | ![rising](Images/eq_uparrow.png) | ![rising](Images/eq_uparrow.png) | ![rising](Images/eq_uparrow.png) | ![rising](Images/eq_uparrow.png) | ![rising](Images/eq_uparrow.png) | ![rising](Images/eq_uparrow.png) | ![rising](Images/eq_uparrow.png) | ![rising](Images/eq_uparrow.png) | ![rising](Images/eq_uparrow.png) | ![rising](Images/eq_uparrow.png) | ![rising](Images/eq_uparrow.png) | ![rising](Images/eq_uparrow.png) | ![rising](Images/eq_uparrow.png) |
 | **State** | A | A | B | C | C | D | A | B | C | D | B | B | B | C | D | B |
 | **Output R** | `0` | `0` | `0` | `0` | `0` | `1` | `0` | `0` | `0` | `1` | `0` | `0` | `0` | `0` | `1` | `0` |
-### Figure with connection of RGB LEDs on Nexys A7 board
-![figure](Images/led.png)
-### Completed table with color settings
-| **RGB LED** | **Artix-7 pin names** | **Red** | **Yellow** | **Green** |
-| :-: | :-: | :-: | :-: | :-: |
-| LD16 | N15, M16, R12 | `1,0,0` | `1,1,0` | `0,1,0` |
-| LD17 | N16, R11, G14 | `1,0,0` | `1,1,0` | `0,1,0` |
 
 ### Figure with connection of RGB LEDs on Nexys A7 board
 
-![1](Images/1.png)
+![1](Images/1.PNG)
 
 ### Completed table with color settings
 
@@ -259,5 +252,3 @@ p_smart_traffic_fsm : process(clk)
         end if; -- Rising edge
     end process p_traffic_fsm;
 ```
-
-
